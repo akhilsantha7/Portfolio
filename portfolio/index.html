@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akhil Santha | ML Engineer Portfolio</title>
+  <meta name="description" content="Akhil Santha — Software Engineer specializing in Machine Learning. 5+ years building production ML systems in computer vision, NLP, and GenAI. Open to new opportunities." />
+  <!-- Open Graph / Facebook, LinkedIn, Slack -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Akhil Santha | ML Engineer Portfolio" />
+  <meta property="og:description" content="Software Engineer specializing in Machine Learning. 5+ years in computer vision, NLP, and GenAI. Open to new opportunities." />
+  <!-- Add og-image.jpg (1200×630) under portfolio/ for social previews -->
+  <meta property="og:image" content="https://akhilsantha7.github.io/Portfolio/og-image.jpg" />
+  <meta property="og:url" content="https://akhilsantha7.github.io/Portfolio/" />
+  <meta property="og:locale" content="en_US" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Akhil Santha | ML Engineer Portfolio" />
+  <meta name="twitter:description" content="Software Engineer specializing in Machine Learning. 5+ years in computer vision, NLP, and GenAI." />
+  <meta name="twitter:image" content="https://akhilsantha7.github.io/Portfolio/og-image.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page-home page-single">
+  <svg aria-hidden="true" style="position:absolute;width:0;height:0;">
+    <defs>
+      <filter id="noise" x="0" y="0">
+        <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" result="n"/>
+        <feColorMatrix type="saturate" values="0" in="n" result="m"/>
+      </filter>
+    </defs>
+  </svg>
+  <div class="bg-gradient" id="bg-gradient"></div>
+  <div class="bg-mesh" aria-hidden="true"></div>
+  <div class="bg-grid" id="bg-grid"></div>
+  <div class="bg-dots" aria-hidden="true"></div>
+  <div class="bg-noise" aria-hidden="true"></div>
+  <div class="bg-orbs" aria-hidden="true">
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+    <div class="bg-orb bg-orb-4"></div>
+  </div>
+  <div class="scroll-progress" id="scroll-progress" role="presentation"></div>
+
+  <header class="top-nav">
+    <a href="#home" class="nav-logo">AS</a>
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#publications">Publications</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-toggle-icon theme-icon-dark" aria-hidden="true">☀</span>
+        <span class="theme-toggle-icon theme-icon-light" aria-hidden="true">☽</span>
+      </button>
+      <a href="Akhil_Resume.pdf" class="nav-cta magnetic-cta" target="_blank" rel="noopener"><span class="magnetic-cta-inner">Resume</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="section hero revealed">
+      <div class="hero-bg-shine" aria-hidden="true"></div>
+      <div class="hero-cursor-trail" id="hero-cursor-trail" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <p class="hero-terminal"><span class="hero-prompt">$</span> <span id="hero-typewriter" class="hero-typewriter"></span><span class="hero-cursor" id="hero-cursor" aria-hidden="true"></span></p>
+        <h1 class="hero-name">Akhil Santha</h1>
+        <p class="hero-title">Software Engineer — Machine Learning</p>
+        <div class="hero-cta-row">
+          <a href="#contact" class="hero-cta magnetic-cta"><span class="magnetic-cta-inner">Get in touch</span></a>
+          <a href="Akhil_Resume.pdf" class="hero-cta hero-cta-primary magnetic-cta" target="_blank" rel="noopener"><span class="magnetic-cta-inner">View Resume</span></a>
+        </div>
+        <div class="hero-featured" aria-hidden="true">
+          <span class="hero-featured-label">Building at the intersection of</span>
+          <span class="hero-featured-tags">Machine Learning, Deep Learning, Data Science, NLP, Computer Vision, GenAI</span>
+        </div>
+        <a href="#about" class="hero-scroll-hint magnetic-cta" aria-label="Scroll to About section">
+          <span class="magnetic-cta-inner">
+            <span class="hero-scroll-hint-text">Explore</span>
+            <span class="hero-scroll-hint-chevron" aria-hidden="true">↓</span>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <section id="about" class="section about-section section-fullscreen">
+      <h2 class="section-title about-section-title">About</h2>
+      <div class="about-layout">
+        <div class="about-photo-wrap about-photo-slide" role="img" aria-label="Akhil Santha">
+          <span class="about-photo-glow" aria-hidden="true"></span>
+        </div>
+        <div class="about-content">
+          <p class="about-belief">Ship the model, then ship the system.</p>
+          <div class="about-text">
+            <p class="about-intro">
+              I’m a software engineer focused on machine learning—<strong>developing ML models</strong> end-to-end (research, training, evaluation) and the <strong>systems</strong> that ship them. I like the stretch between notebook and production: dependable pipelines, thoughtful MLOps, and code that stays maintainable after launch.
+            </p>
+            <p class="about-body">
+              I’m a Senior Machine Learning Engineer at CVS Health, where I drive the research and production deployment of ML models on <strong>Kubernetes</strong>—designing <strong>low-latency</strong>, <strong>horizontally scalable</strong> serving architectures so inference stays fast and dependable as traffic and use cases grow. I partner closely with platform and software engineers to harden pipelines, tighten SLOs, and ship GenAI and classical ML workloads the business can trust at enterprise scale.
+            </p>
+            <p class="about-body">
+              Before CVS, my work lived in three places where models can’t hide behind a leaderboard: <strong>medicine</strong> (Boston Scientific, Visual DX), <strong>finance</strong> and LLM-driven analytics (Fannie Mae), and <strong>child safety</strong>—researching and building sequence models for parental-control and trust-and-safety systems at Smith Micro, where “wrong” isn’t a metric dip, it’s a human cost. Alongside the R&amp;D, I kept one foot on the factory floor: shipping and hardening models across <strong>different production environments</strong>—from regulated pipelines and cloud services to mobile and edge—so each deployment taught me a new dialect of latency, compliance, and what “done” has to mean. Kodak Alaris added computer vision in product settings; taken together, those chapters trained me to calibrate for rigor, speed, and the person on the other side of the screen.
+            </p>
+            <p class="about-body">
+              Outside of work, you’ll usually find me on a side project when an idea won’t let go, reading or listening to something about ML, or spending downtime with family and friends.
+            </p>
+          </div>
+          <div class="about-pyramids-wrap">
+            <div class="about-tech-stack about-tech-pyramid" aria-label="Programming languages & tools">
+              <div class="about-tech-row">
+                <span class="about-tech-item"><img class="about-tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="" width="28" height="28"/>Python</span>
+              </div>
+              <div class="about-tech-row">
+                <span class="about-tech-item"><img class="about-tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg" alt="" width="28" height="28"/>TensorFlow</span>
+                <span class="about-tech-item"><img class="about-tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg" alt="" width="28" height="28"/>PyTorch</span>
+              </div>
+              <div class="about-tech-row">
+                <span class="about-tech-item"><img class="about-tech-logo" src="https://cdn.simpleicons.org/keras/D00000" alt="" width="28" height="28"/>Keras</span>
+                <span class="about-tech-item"><img class="about-tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="" width="28" height="28"/>SQL</span>
+                <span class="about-tech-item"><img class="about-tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matlab/matlab-original.svg" alt="" width="28" height="28"/>MATLAB</span>
+              </div>
+              <div class="about-tech-row">
+                <span class="about-tech-item"><img class="about-tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="" width="28" height="28"/>C++</span>
+                <span class="about-tech-item"><img class="about-tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swift/swift-original.svg" alt="" width="28" height="28"/>Swift</span>
+                <span class="about-tech-item"><img class="about-tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" alt="" width="28" height="28"/>C</span>
+              </div>
+            </div>
+            <div class="about-tech-stack about-tech-pyramid about-tech-pyramid-2" aria-label="Cloud, DevOps & platforms">
+              <div class="about-tech-row">
+                <span class="about-tech-item"><img class="about-tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="" width="28" height="28"/>AWS</span>
+              </div>
+              <div class="about-tech-row">
+                <span class="about-tech-item"><img class="about-tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg" alt="" width="28" height="28"/>Azure</span>
+                <span class="about-tech-item"><img class="about-tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-plain.svg" alt="" width="28" height="28"/>Kubernetes</span>
+              </div>
+              <div class="about-tech-row">
+                <span class="about-tech-item"><img class="about-tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="" width="28" height="28"/>Docker</span>
+                <span class="about-tech-item"><img class="about-tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-line.svg" alt="" width="28" height="28"/>Jenkins</span>
+                <span class="about-tech-item"><img class="about-tech-logo" src="https://cdn.simpleicons.org/githubactions/2088FF" alt="" width="28" height="28"/>GHA</span>
+              </div>
+              <div class="about-tech-row">
+                <span class="about-tech-item"><img class="about-tech-logo" src="https://cdn.simpleicons.org/nvidia/76B900" alt="" width="28" height="28"/>GPUs</span>
+                <span class="about-tech-item"><img class="about-tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apple/apple-original.svg" alt="" width="28" height="28"/>iOS</span>
+                <span class="about-tech-item"><img class="about-tech-logo" src="https://cdn.simpleicons.org/tensorflow/FF6F00" alt="" width="28" height="28"/>MLOps</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-pipeline" aria-hidden="true">
+            <span class="about-pipeline-step">Research</span>
+            <span class="about-pipeline-arrow" aria-hidden="true">→</span>
+            <span class="about-pipeline-step">Development</span>
+            <span class="about-pipeline-arrow" aria-hidden="true">→</span>
+            <span class="about-pipeline-step">Deployment</span>
+          </div>
+          <p class="about-tagline">From first principles to production.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section education-section">
+      <div class="education-bg" aria-hidden="true"></div>
+      <div class="education-inner">
+      <div class="education-header">
+        <h2 class="section-title education-title">Education</h2>
+        <p class="education-tagline">Where I learned to build.</p>
+      </div>
+      <div class="edu-diagram">
+        <div class="edu-connector-wrap">
+          <svg class="edu-connector-svg edu-connector-roots" viewBox="0 0 100 50" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="edu-root-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="rgba(6, 182, 212, 0.95)"/>
+                <stop offset="100%" stop-color="rgba(6, 182, 212, 0.4)"/>
+              </linearGradient>
+              <linearGradient id="edu-root-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="rgba(139, 92, 246, 0.9)"/>
+                <stop offset="100%" stop-color="rgba(139, 92, 246, 0.4)"/>
+              </linearGradient>
+            </defs>
+            <!-- Trunk: main stem from Education down -->
+            <path class="edu-root-trunk" d="M 50 0 C 51 8 49 14 50 20" fill="none" stroke="url(#edu-root-cyan)" stroke-width="2.2" stroke-linecap="round"/>
+            <!-- Root cluster: junction where roots spread -->
+            <circle class="edu-root-junction" cx="50" cy="20" r="2.5" fill="rgba(15, 23, 42, 0.9)" stroke="rgba(6, 182, 212, 0.7)" stroke-width="1"/>
+            <!-- Roots to left box (Masters) - organic, tree-root style -->
+            <path class="edu-root edu-root-left" d="M 50 20 C 38 22 30 32 26 48 L 25 50" fill="none" stroke="url(#edu-root-cyan)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <path class="edu-root edu-root-left edu-root-thin" d="M 50 19 C 42 24 34 36 27 46 L 25 50" fill="none" stroke="url(#edu-root-cyan)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+            <path class="edu-root edu-root-left edu-root-thin" d="M 49 21 C 36 26 29 38 25 50" fill="none" stroke="url(#edu-root-cyan)" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- Roots to right box (Bachelors) - organic, tree-root style -->
+            <path class="edu-root edu-root-right" d="M 50 20 C 62 22 70 32 74 48 L 75 50" fill="none" stroke="url(#edu-root-purple)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <path class="edu-root edu-root-right edu-root-thin" d="M 50 19 C 58 24 66 36 73 46 L 75 50" fill="none" stroke="url(#edu-root-purple)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+            <path class="edu-root edu-root-right edu-root-thin" d="M 51 21 C 64 26 71 38 75 50" fill="none" stroke="url(#edu-root-purple)" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="edu-list">
+        <div class="edu-card-wrap edu-card-wrap-left">
+          <span class="edu-card-logo-outside" aria-hidden="true"><img src="rit.png" alt="RIT"/></span>
+          <button type="button" class="edu-card-trigger edu-card edu-card-masters" data-edu="masters" aria-haspopup="dialog">
+            <span class="edu-card-body">
+              <span class="edu-degree">Master of Science</span>
+              <span class="edu-college">Rochester Institute of Technology</span>
+              <span class="edu-department">Computer Engineering</span>
+              <span class="edu-date">January 2018 – May 2020</span>
+            </span>
+            <span class="project-card-arrow" aria-hidden="true">→</span>
+          </button>
+        </div>
+        <div class="edu-card-wrap edu-card-wrap-right">
+          <button type="button" class="edu-card-trigger edu-card edu-card-bachelors" data-edu="bachelors" aria-haspopup="dialog">
+            <span class="edu-card-body">
+              <span class="edu-degree">Bachelor of Science</span>
+              <span class="edu-college">University College of Engineering, Osmania University</span>
+              <span class="edu-department">Electronics and Communications Engineering</span>
+              <span class="edu-date">September 2013 – May 2017</span>
+            </span>
+            <span class="project-card-arrow" aria-hidden="true">→</span>
+          </button>
+          <span class="edu-card-logo-outside" aria-hidden="true"><img src="uceou.png" alt="Osmania University"/></span>
+        </div>
+        </div>
+      </div>
+      </div>
+      <div id="edu-content-masters" class="edu-sheet-content-source" aria-hidden="true">
+        <div class="edu-two-col">
+          <div class="edu-col-courses">
+            <h4 class="edu-col-title">Courses</h4>
+            <div class="edu-courses-grid">
+              <span class="edu-course-box">Machine Learning</span>
+              <span class="edu-course-box">Deep Learning</span>
+              <span class="edu-course-box">Computer Vision</span>
+              <span class="edu-course-box">Data Science</span>
+              <span class="edu-course-box">Statistics</span>
+              <span class="edu-course-box">Real Time Embedding Systems</span>
+              <span class="edu-course-box">Multiple Processor Systems</span>
+              <span class="edu-course-box">Brain Inspired Computing — Neural Networks</span>
+            </div>
+          </div>
+          <div class="edu-col-spec">
+            <h4 class="edu-col-title">Specialization & Research</h4>
+            <p class="edu-date">January 2018 – May 2020</p>
+            <div class="edu-spec-block">
+              <span class="edu-spec-label">Thesis</span>
+              <span class="edu-spec-value">Deep Fakes Generation using GANs</span>
+            </div>
+            <div class="edu-spec-block">
+              <span class="edu-spec-label">Specialization</span>
+              <span class="edu-spec-value">Machine Learning, Deep Learning and Computer Vision</span>
+            </div>
+            <div class="edu-spec-block">
+              <span class="edu-spec-label">Research area</span>
+              <span class="edu-spec-value">Generative Adversarial Networks</span>
+            </div>
+            <div class="edu-spec-block">
+              <span class="edu-spec-label">Research Lab</span>
+              <span class="edu-spec-value">Sign Language Translation, Evolution of GraphCNN, GANs</span>
+            </div>
+            <div class="edu-spec-block">
+              <span class="edu-spec-label">Supervisor</span>
+              <span class="edu-spec-value">Prof. Dr. Ptucha</span>
+            </div>
+            <div class="edu-spec-block edu-spec-gpa">
+              <span class="edu-spec-label">GPA</span>
+              <span class="edu-spec-value">3.7/4.0 · 95.5%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="edu-content-bachelors" class="edu-sheet-content-source" aria-hidden="true">
+        <p class="edu-sheet-placeholder">Bachelor of Science in Electronics and Communications Engineering from University College of Engineering, Osmania University, India (2013–2017).</p>
+      </div>
+    </section>
+
+    <div id="edu-sheet" class="project-sheet" role="dialog" aria-modal="true" aria-labelledby="edu-sheet-title" aria-hidden="true">
+      <div class="project-sheet-backdrop" data-close-sheet></div>
+      <div class="project-sheet-panel">
+        <button type="button" class="project-sheet-back" data-close-sheet aria-label="Back">← Back</button>
+        <h2 id="edu-sheet-title" class="project-sheet-title"></h2>
+        <p class="project-sheet-subtitle" id="edu-sheet-subtitle"></p>
+        <div id="edu-sheet-content" class="project-sheet-blocks"></div>
+      </div>
+    </div>
+
+    <section id="experience" class="section section-fullscreen">
+      <h2 class="section-title">Work Experience</h2>
+      <p class="section-subtitle">My most recent work experience.</p>
+
+      <div class="exp-list">
+        <button type="button" class="exp-card-trigger exp-card" data-exp="0" aria-haspopup="dialog">
+          <span class="exp-card-top">
+            <img class="exp-company-logo" src="https://logo.clearbit.com/cvshealth.com" alt="" width="38" height="38" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=cvshealth.com&amp;sz=128'" />
+            <span class="exp-company-tag">CVS · TX</span>
+          </span>
+          <h3>Senior Machine Learning Engineer</h3>
+          <span class="exp-date-inline">June 2025 – Present</span>
+          <span class="project-card-arrow" aria-hidden="true">→</span>
+        </button>
+        <button type="button" class="exp-card-trigger exp-card" data-exp="1" aria-haspopup="dialog">
+          <span class="exp-card-top">
+            <img class="exp-company-logo" src="https://logo.clearbit.com/fanniemae.com" alt="" width="38" height="38" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=fanniemae.com&amp;sz=128'" />
+            <span class="exp-company-tag">Fannie Mae · TX</span>
+          </span>
+          <h3>Machine Learning Engineer II</h3>
+          <span class="exp-date-inline">June 2023 – June 2025</span>
+          <span class="project-card-arrow" aria-hidden="true">→</span>
+        </button>
+        <button type="button" class="exp-card-trigger exp-card" data-exp="2" aria-haspopup="dialog">
+          <span class="exp-card-top">
+            <img class="exp-company-logo" src="https://logo.clearbit.com/smithmicro.com" alt="" width="38" height="38" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=smithmicro.com&amp;sz=128'" />
+            <span class="exp-company-tag">Smith Micro Software · CA</span>
+          </span>
+          <h3>Machine Learning Engineer</h3>
+          <span class="exp-date-inline">June 2021 – April 2023</span>
+          <span class="project-card-arrow" aria-hidden="true">→</span>
+        </button>
+        <button type="button" class="exp-card-trigger exp-card" data-exp="3" aria-haspopup="dialog">
+          <span class="exp-card-top">
+            <img class="exp-company-logo" src="https://logo.clearbit.com/bostonscientific.com" alt="" width="38" height="38" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=bostonscientific.com&amp;sz=128'" />
+            <span class="exp-company-tag">Boston Scientific · CA</span>
+          </span>
+          <h3>Algorithm Engineer — Machine Learning</h3>
+          <span class="exp-date-inline">November 2020 – June 2021</span>
+          <span class="project-card-arrow" aria-hidden="true">→</span>
+        </button>
+        <button type="button" class="exp-card-trigger exp-card" data-exp="4" aria-haspopup="dialog">
+          <span class="exp-card-top">
+            <img class="exp-company-logo" src="https://logo.clearbit.com/kodakalaris.com" alt="" width="38" height="38" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=kodak.com&amp;sz=128'" />
+            <span class="exp-company-tag">Kodak Alaris · NY</span>
+          </span>
+          <h3>Machine Learning Intern</h3>
+          <span class="exp-date-inline">February 2019 – December 2019</span>
+          <span class="project-card-arrow" aria-hidden="true">→</span>
+        </button>
+        <button type="button" class="exp-card-trigger exp-card" data-exp="5" aria-haspopup="dialog">
+          <span class="exp-card-top">
+            <img class="exp-company-logo" src="https://logo.clearbit.com/visualdx.com" alt="" width="38" height="38" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=visualdx.com&amp;sz=128'" />
+            <span class="exp-company-tag">Visual DX · NY</span>
+          </span>
+          <h3>Machine Learning Intern</h3>
+          <span class="exp-date-inline">August 2018 – December 2018</span>
+          <span class="project-card-arrow" aria-hidden="true">→</span>
+        </button>
+        </div>
+
+      <div id="exp-content-0" class="exp-sheet-content-source" aria-hidden="true"><div class="exp-content"><ul>
+            <li>Developed machine learning models for SKU assortment using historical sales and transactional data to optimize inventory and drive revenue growth.</li>
+            <li>Built deep learning models and applied GenAI / prompt engineering to generate product embeddings and structured product attributes from unstructured descriptions, supporting advanced analytics and recommendation systems aligned with business objectives.</li>
+            <li>Designed and implemented MLOps pipelines with Kubernetes to deploy models into production, ensuring scalability, reliability, and monitoring of ML workflows.</li>
+            <li>Built and maintained efficient data pipelines to support ML operations, improving data accessibility and reducing processing time for downstream models.</li>
+            <li>Developed and led a team to build optimized, scalable, and maintainable ML pipelines, enforcing best practices.</li>
+          </ul><div class="exp-tools"><span class="exp-tool-box">Python</span><span class="exp-tool-box">TensorFlow</span><span class="exp-tool-box">PyTorch</span><span class="exp-tool-box">SQL</span><span class="exp-tool-box">Azure</span><span class="exp-tool-box">Kubernetes</span><span class="exp-tool-box">Docker</span><span class="exp-tool-box">Jenkins</span><span class="exp-tool-box">GitHub Actions</span><span class="exp-tool-box">GenAI</span><span class="exp-tool-box">Snowflake</span></div></div></div>
+      <div id="exp-content-1" class="exp-sheet-content-source" aria-hidden="true"><div class="exp-content"><ul>
+            <li>Led the development and deployment of deep learning models for financial data analysis, enabling anomaly detection, pattern recognition, and operational improvements.</li>
+            <li>Built and optimized large language models using AWS Bedrock and implemented advanced algorithms (Isolation Forests, Random Cut Forest, LSTM Autoencoders, Prophet) to generate actionable insights and support predictive analytics.</li>
+            <li>Designed and implemented end-to-end MLOps pipelines using AWS SageMaker for model training, deployment, monitoring, and seamless integration with production systems.</li>
+            <li>Developed high-performance prediction APIs using Flask, improving invocation speed through parallel computing and ensuring smooth integration with user-facing applications for enhanced decision-making.</li>
+            <li>Directed data engineering initiatives with AWS Glue and TensorFlow to streamline pipelines, reduce processing time by 20%, and deploy scalable, production-ready ML solutions for financial analytics.</li>
+          </ul><div class="exp-tools"><span class="exp-tool-box">Python</span><span class="exp-tool-box">TensorFlow</span><span class="exp-tool-box">AWS SageMaker</span><span class="exp-tool-box">AWS Bedrock</span><span class="exp-tool-box">AWS Glue</span><span class="exp-tool-box">Flask</span><span class="exp-tool-box">Prophet</span><span class="exp-tool-box">SQL</span></div></div></div>
+      <div id="exp-content-2" class="exp-sheet-content-source" aria-hidden="true"><div class="exp-content"><ul>
+            <li>Led the design, training, and deployment of sequence-to-sequence deep learning models (LSTMs, Transformers) for large-scale parental control systems, achieving 99% accuracy in bullying and profanity classification and significantly improving user safety.</li>
+            <li>Developed and integrated a BERT-based MAC address classification system into iOS applications, enhancing device identification accuracy and streamlining device-level controls.</li>
+            <li>Optimized and quantized deep learning models to 8-bit precision, reducing model size by 75% while retaining over 95% of baseline accuracy, allowing efficient deployment on resource-constrained edge devices. Worked on deploying the trained models onto iOS devices using Core ML tools.</li>
+            <li>Led the Location Anomaly Detection initiative, applying supervised and unsupervised learning techniques to identify abnormal behavioral patterns, improving user safety signals and system reliability.</li>
+            <li>Designed and fine-tuned action recognition models optimized for edge environments, balancing accuracy, latency, and memory constraints.</li>
+            <li>Deployed and maintained cross-platform ML services using AWS and TensorFlow, supporting scalable inference and continuous model updates.</li>
+          </ul><div class="exp-tools"><span class="exp-tool-box">Python</span><span class="exp-tool-box">TensorFlow</span><span class="exp-tool-box">PyTorch</span><span class="exp-tool-box">BERT</span><span class="exp-tool-box">Core ML</span><span class="exp-tool-box">iOS</span><span class="exp-tool-box">AWS</span><span class="exp-tool-box">SQL</span></div></div></div>
+      <div id="exp-content-3" class="exp-sheet-content-source" aria-hidden="true"><div class="exp-content"><ul>
+            <li>Developed deep learning classification models on DICOM-formatted IVUS images to accurately identify and classify stent regions, supporting catheter-based diagnostic workflows.</li>
+            <li>Designed and implemented segmentation models for IVUS images to precisely detect stent and calcium regions, improving the accuracy of intravascular image analysis. Applied image processing and computer vision techniques to improve feature extraction and model performance in medical imaging pipelines.</li>
+            <li>Conducted research and experimentation with 2D and 3D U-Net architectures to enhance stent segmentation performance across varying imaging conditions and modalities.</li>
+            <li>Implemented distributed training pipelines using PyTorch, enabling scalable multi-GPU training and reducing model training time for large IVUS datasets.</li>
+            <li>Optimized trained models through techniques such as quantization to enable efficient deployment on medical devices while maintaining clinical-grade accuracy.</li>
+          </ul><div class="exp-tools"><span class="exp-tool-box">Python</span><span class="exp-tool-box">PyTorch</span><span class="exp-tool-box">TensorFlow</span><span class="exp-tool-box">DICOM</span><span class="exp-tool-box">OpenCV</span><span class="exp-tool-box">U-Net</span></div></div></div>
+      <div id="exp-content-4" class="exp-sheet-content-source" aria-hidden="true"><div class="exp-content"><ul>
+            <li>Developed and trained deep learning models using TensorFlow for face and eyeglass detection, achieving 98% accuracy in eyeglass classification. Applied transfer learning techniques by fine-tuning the Inception ResNet v1 architecture, improving model accuracy and inference efficiency for real-world deployment.</li>
+            <li>Optimized and quantized trained models using TensorRT with 8-bit precision, reducing model size by 75% while maintaining equivalent detection performance.</li>
+            <li>Designed and deployed inference pipelines using OpenCV and DLib to integrate face, eyeglass, and landmark detection models into kiosk-based systems, delivering interactive and personalized user experiences.</li>
+            <li>Developed models for classification and segmentation of 3D point cloud data, implementing point cloud registration and convex hull construction using PCL and Open3D.</li>
+          </ul><div class="exp-tools"><span class="exp-tool-box">Python</span><span class="exp-tool-box">TensorFlow</span><span class="exp-tool-box">TensorRT</span><span class="exp-tool-box">OpenCV</span><span class="exp-tool-box">DLib</span><span class="exp-tool-box">PCL</span><span class="exp-tool-box">Open3D</span></div></div></div>
+      <div id="exp-content-5" class="exp-sheet-content-source" aria-hidden="true"><div class="exp-content"><ul>
+            <li>Designed and developed deep learning models for skin lesion classification, outperforming state-of-the-art benchmarks by 2% on publicly available datasets.</li>
+            <li>Built and optimized TensorFlow-based computer vision models robust to variations in skin tone, lighting conditions, and lesion appearance, ensuring consistent performance across diverse populations.</li>
+            <li>Applied advanced image processing techniques, including edge detection and morphological operations, to accurately extract lesion regions and improve downstream classification accuracy.</li>
+            <li>Developed and fine-tuned algorithms to normalize color and texture variations across images, enhancing model generalization and reliability.</li>
+          </ul><div class="exp-tools"><span class="exp-tool-box">Python</span><span class="exp-tool-box">TensorFlow</span><span class="exp-tool-box">OpenCV</span><span class="exp-tool-box">Keras</span></div></div></div>
+    </section>
+
+    <div id="exp-sheet" class="project-sheet" role="dialog" aria-modal="true" aria-labelledby="exp-sheet-title" aria-hidden="true">
+      <div class="project-sheet-backdrop" data-close-sheet></div>
+      <div class="project-sheet-panel">
+        <button type="button" class="project-sheet-back" data-close-sheet aria-label="Back">← Back</button>
+        <h2 id="exp-sheet-title" class="project-sheet-title"></h2>
+        <p class="project-sheet-subtitle" id="exp-sheet-subtitle"></p>
+        <div id="exp-sheet-content" class="project-sheet-blocks"></div>
+      </div>
+    </div>
+
+    <section id="publications" class="section section-fullscreen">
+      <h2 class="section-title">Scholarly Works & Publications</h2>
+      <div class="pub-list">
+        <button type="button" class="pub-card" data-pub="sign-lang" aria-haspopup="dialog" aria-expanded="false">
+          <span class="pub-icon" aria-hidden="true">📄</span>
+          <div class="pub-card-text">
+            <span class="pub-title">Deep Learning Methods for Sign Language Translation</span>
+            <span class="pub-teaser">ACM · Neural sign language translation & recognition</span>
+          </div>
+          <span class="pub-arrow" aria-hidden="true">→</span>
+        </button>
+        <button type="button" class="pub-card" data-pub="deepfakes" aria-haspopup="dialog" aria-expanded="false">
+          <span class="pub-icon" aria-hidden="true">📄</span>
+          <div class="pub-card-text">
+            <span class="pub-title">Deepfakes Generation using GANs</span>
+            <span class="pub-teaser">Thesis · GANs for face manipulation in images and video</span>
+          </div>
+          <span class="pub-arrow" aria-hidden="true">→</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="projects" class="section section-fullscreen">
+      <h2 class="section-title">Projects</h2>
+      <p class="section-subtitle">Please refer to <a href="https://github.com/akhilsantha7" target="_blank" rel="noopener">GitHub</a> for source code and more projects.</p>
+      <div class="projects-grid">
+        <article class="card project-card project-card-trigger project-card-featured" data-project-sheet="dharamind-sheet">
+          <span class="project-card-badge">Featured</span>
+          <div class="project-card-trigger-text">
+            <h3>iOS App — DHARAMIND</h3>
+            <p class="meta">iOS · Mobile · On-device ML + GenAI</p>
+            <p class="project-card-impact">Smart agriculture: irrigation timing & plant disease detection for farmers.</p>
+          </div>
+          <span class="project-card-arrow" aria-hidden="true">→</span>
+        </article>
+        <article class="card project-card project-card-trigger" data-project-sheet="soilq-sheet">
+          <div class="project-card-trigger-text">
+            <h3>Soil Moisture and Plant Disease Detection</h3>
+            <p class="meta">Computer Vision · Agriculture</p>
+          </div>
+          <span class="project-card-arrow" aria-hidden="true">→</span>
+        </article>
+        <article class="card project-card">
+          <h3>Evolution of Graph Classifiers</h3>
+          <p class="meta">Deep Learning · Graph Neural Networks</p>
+        </article>
+        <article class="card project-card project-card-trigger" data-project-sheet="tomato-sheet">
+          <div class="project-card-trigger-text">
+            <h3>Fruit and Ripeness Detection using YOLO</h3>
+            <p class="meta">YOLO · Object Detection</p>
+          </div>
+          <span class="project-card-arrow" aria-hidden="true">→</span>
+        </article>
+        <article class="card project-card project-card-trigger" data-project-sheet="facemask-sheet">
+          <div class="project-card-trigger-text">
+            <h3>Face Mask Detection</h3>
+            <p class="meta">Computer Vision · Detection</p>
+          </div>
+          <span class="project-card-arrow" aria-hidden="true">→</span>
+        </article>
+        <article class="card project-card project-card-trigger" data-project-sheet="facial-sheet">
+          <div class="project-card-trigger-text">
+            <h3>Facial Understanding & Eye-Glass Detection</h3>
+            <p class="meta">Computer Vision · Face Analysis</p>
+          </div>
+          <span class="project-card-arrow" aria-hidden="true">→</span>
+        </article>
+        <article class="card project-card project-card-trigger" data-project-sheet="signlang-sheet">
+          <div class="project-card-trigger-text">
+            <h3>Sign Language Recognition</h3>
+            <p class="meta">Skeleton-Based · Action Recognition</p>
+          </div>
+          <span class="project-card-arrow" aria-hidden="true">→</span>
+        </article>
+        <article class="card project-card project-card-trigger" data-project-sheet="skin-sheet">
+          <div class="project-card-trigger-text">
+            <h3>Skin Disease Classification</h3>
+            <p class="meta">PyTorch · Computer Vision</p>
+          </div>
+          <span class="project-card-arrow" aria-hidden="true">→</span>
+        </article>
+      </div>
+    </section>
+
+    <div id="skin-sheet" class="project-sheet" role="dialog" aria-modal="true" aria-labelledby="skin-sheet-title" aria-hidden="true">
+      <div class="project-sheet-backdrop" data-close-sheet></div>
+      <div class="project-sheet-panel">
+        <button type="button" class="project-sheet-back" data-close-sheet aria-label="Back">← Back</button>
+        <h2 id="skin-sheet-title" class="project-sheet-title">Skin Disease Classification</h2>
+        <p class="project-sheet-subtitle">PyTorch · DenseNet & ResNet · SD198 & HAM datasets</p>
+        <div class="project-sheet-blocks">
+          <section class="project-sheet-block">
+            <h3 class="project-sheet-block-title">Overview</h3>
+            <ul class="project-sheet-list">
+              <li>Image-based skin disease classification using deep learning (PyTorch, Python)</li>
+              <li>Training on two public datasets: <strong>SD198</strong> and <strong>HAM</strong>, with dataset preparation and train/test splits</li>
+              <li>DenseNet and ResNet backbones for classification; configurable training and evaluation pipelines</li>
+              <li>Pretrained checkpoints available on request for reproduction and deployment</li>
+            </ul>
+            <a href="https://github.com/akhilsantha7/Skin-Disease-Classification" class="project-sheet-link" target="_blank" rel="noopener">View on GitHub →</a>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <div id="signlang-sheet" class="project-sheet" role="dialog" aria-modal="true" aria-labelledby="signlang-sheet-title" aria-hidden="true">
+      <div class="project-sheet-backdrop" data-close-sheet></div>
+      <div class="project-sheet-panel">
+        <button type="button" class="project-sheet-back" data-close-sheet aria-label="Back">← Back</button>
+        <h2 id="signlang-sheet-title" class="project-sheet-title">Sign Language Recognition</h2>
+        <p class="project-sheet-subtitle">Skeleton-based action recognition · Graph convolutions on OpenPose</p>
+        <div class="project-sheet-blocks">
+          <section class="project-sheet-block">
+            <h3 class="project-sheet-block-title">Overview</h3>
+            <ul class="project-sheet-list">
+              <li>Sign language translation via skeleton-based action recognition using graph convolutional networks</li>
+              <li>OpenPose body keypoints fed into spatial–temporal graph convolutions (ST-GCN–style architecture)</li>
+              <li>Custom data loader, model, and training pipeline; inference and vocabulary building for end-to-end recognition</li>
+              <li>Python codebase; builds on “Spatial Temporal Graph Convolutional Networks for Skeleton-Based Action Recognition”</li>
+            </ul>
+            <a href="https://github.com/akhilsantha7/Sign-Language-Recognition" class="project-sheet-link" target="_blank" rel="noopener">View on GitHub →</a>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <div id="facial-sheet" class="project-sheet" role="dialog" aria-modal="true" aria-labelledby="facial-sheet-title" aria-hidden="true">
+      <div class="project-sheet-backdrop" data-close-sheet></div>
+      <div class="project-sheet-panel">
+        <button type="button" class="project-sheet-back" data-close-sheet aria-label="Back">← Back</button>
+        <h2 id="facial-sheet-title" class="project-sheet-title">Facial Understanding & Eye-Glass Detection</h2>
+        <p class="project-sheet-subtitle">Face Analysis · Landmarks · Eyeglass Classification</p>
+        <div class="project-sheet-blocks">
+          <section class="project-sheet-block">
+            <h3 class="project-sheet-block-title">Facial Understanding</h3>
+            <ul class="project-sheet-list">
+              <li>Face detection and facial landmark detection modules (C++)</li>
+              <li>Structured repo: Face-Detection and Facial_Landmark_Detection for robust face analysis pipelines</li>
+            </ul>
+            <a href="https://github.com/akhilsantha7/Facial-Understanding" class="project-sheet-link project-sheet-link-small" target="_blank" rel="noopener">Facial Understanding on GitHub →</a>
+          </section>
+          <section class="project-sheet-block">
+            <h3 class="project-sheet-block-title">Eye-Glass Detection</h3>
+            <ul class="project-sheet-list">
+              <li>Deep learning model for eyeglass classification; <strong>98.1% accuracy</strong> on test set (TensorFlow, FaceNet-based)</li>
+              <li>Graph freezing, optimization, and quantization for smaller, deployment-friendly models</li>
+              <li>OpenCV (C++) deployment for inference; Python used for training and evaluation</li>
+            </ul>
+            <a href="https://github.com/akhilsantha7/Eye-Glass-Detection" class="project-sheet-link project-sheet-link-small" target="_blank" rel="noopener">Eye-Glass Detection on GitHub →</a>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <div id="soilq-sheet" class="project-sheet" role="dialog" aria-modal="true" aria-labelledby="soilq-sheet-title" aria-hidden="true">
+      <div class="project-sheet-backdrop" data-close-sheet></div>
+      <div class="project-sheet-panel">
+        <button type="button" class="project-sheet-back" data-close-sheet aria-label="Back">← Back</button>
+        <h2 id="soilq-sheet-title" class="project-sheet-title">Soil Moisture & Plant Disease Detection</h2>
+        <p class="project-sheet-subtitle">SoilQ · Computer Vision · Agriculture</p>
+        <div class="project-sheet-blocks">
+          <section class="project-sheet-block">
+            <h3 class="project-sheet-block-title">Soil Moisture</h3>
+            <ul class="project-sheet-list">
+              <li>Soil moisture level prediction and analysis for irrigation decisions</li>
+              <li>REST API and data pipeline for soil sensor or request-based inputs</li>
+              <li>Dockerized deployment with Procfile for cloud hosting</li>
+            </ul>
+          </section>
+          <section class="project-sheet-block">
+            <h3 class="project-sheet-block-title">Plant Disease Detection</h3>
+            <ul class="project-sheet-list">
+              <li>Image-based plant disease classification using deep learning</li>
+              <li>Disease detection from leaf and plant images; integrated with the SoilQ app (Python, Flask)</li>
+            </ul>
+          </section>
+        </div>
+        <a href="https://github.com/akhilsantha7/SoilQ" class="project-sheet-link" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+    </div>
+
+    <div id="tomato-sheet" class="project-sheet" role="dialog" aria-modal="true" aria-labelledby="tomato-sheet-title" aria-hidden="true">
+      <div class="project-sheet-backdrop" data-close-sheet></div>
+      <div class="project-sheet-panel">
+        <button type="button" class="project-sheet-back" data-close-sheet aria-label="Back">← Back</button>
+        <h2 id="tomato-sheet-title" class="project-sheet-title">Fruit and Ripeness Detection using YOLO</h2>
+        <p class="project-sheet-subtitle">Tomato-detection · YOLO · Computer Vision</p>
+        <div class="project-sheet-blocks">
+          <section class="project-sheet-block">
+            <h3 class="project-sheet-block-title">Detection & pipeline</h3>
+            <ul class="project-sheet-list">
+              <li>Object detection for tomatoes and fruit in images using YOLO</li>
+              <li>Ripeness stage classification from visual features (e.g. color, texture)</li>
+              <li>End-to-end pipeline built in Jupyter Notebook for experimentation and visualization</li>
+            </ul>
+          </section>
+          <section class="project-sheet-block">
+            <h3 class="project-sheet-block-title">Tech</h3>
+            <ul class="project-sheet-list">
+              <li>YOLO-based detection; Python and Jupyter for training, inference, and visualization</li>
+              <li>Modular pipeline with separate components for data, models, and detection</li>
+            </ul>
+          </section>
+        </div>
+        <a href="https://github.com/akhilsantha7/Tomato-detection" class="project-sheet-link" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+    </div>
+
+    <div id="facemask-sheet" class="project-sheet" role="dialog" aria-modal="true" aria-labelledby="facemask-sheet-title" aria-hidden="true">
+      <div class="project-sheet-backdrop" data-close-sheet></div>
+      <div class="project-sheet-panel">
+        <button type="button" class="project-sheet-back" data-close-sheet aria-label="Back">← Back</button>
+        <h2 id="facemask-sheet-title" class="project-sheet-title">Face Mask Detection</h2>
+        <p class="project-sheet-subtitle">Face-Mask-Detection · Computer Vision · OpenCV</p>
+        <div class="project-sheet-blocks">
+          <section class="project-sheet-block">
+            <h3 class="project-sheet-block-title">Training & inference</h3>
+            <ul class="project-sheet-list">
+              <li>End-to-end training pipeline; inference on single images, video files, and live webcam</li>
+              <li>OpenCV-based face detection with a learned mask vs. no-mask classifier</li>
+            </ul>
+          </section>
+          <section class="project-sheet-block">
+            <h3 class="project-sheet-block-title">Deployment</h3>
+            <ul class="project-sheet-list">
+              <li>Supports image, video, and real-time webcam input for flexible deployment</li>
+              <li>Python stack with standard dependencies for easy setup and integration</li>
+            </ul>
+          </section>
+        </div>
+        <a href="https://github.com/akhilsantha7/Face-Mask-Detection" class="project-sheet-link" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+    </div>
+
+    <div id="dharamind-sheet" class="project-sheet" role="dialog" aria-modal="true" aria-labelledby="dharamind-sheet-title" aria-hidden="true">
+      <div class="project-sheet-backdrop" data-close-sheet></div>
+      <div class="project-sheet-panel">
+        <button type="button" class="project-sheet-back" data-close-sheet aria-label="Back">← Back</button>
+        <h2 id="dharamind-sheet-title" class="project-sheet-title">iOS App — DHARAMIND</h2>
+        <p class="project-sheet-subtitle">iOS · AgriTech · Smart agriculture — irrigation & plant disease detection</p>
+        <div class="project-sheet-blocks">
+          <section class="project-sheet-block">
+            <h3 class="project-sheet-block-title">Overview</h3>
+            <p class="project-sheet-desc">A smart agriculture iOS app that helps farmers with <strong>irrigation timing</strong> and <strong>plant disease detection</strong>, backed by on-device ML and cloud-based GenAI.</p>
+          </section>
+          <section class="project-sheet-block">
+            <h3 class="project-sheet-block-title">Architecture</h3>
+            <div class="project-sheet-img-wrap">
+              <img src="ios_app.png" alt="DHARAMIND architecture" class="project-sheet-img" />
+            </div>
+          </section>
+          <section class="project-sheet-block">
+            <h3 class="project-sheet-block-title">App demo</h3>
+            <div class="project-sheet-videos">
+              <div class="project-sheet-video-wrap">
+                <span class="project-sheet-video-label">Part 1</span>
+                <video class="project-sheet-video" controls playsinline preload="metadata" aria-label="DHARAMIND demo part 1">
+                  <source src="1.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="project-sheet-video-wrap">
+                <span class="project-sheet-video-label">Part 2</span>
+                <video class="project-sheet-video" controls playsinline preload="metadata" aria-label="DHARAMIND demo part 2">
+                  <source src="2.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <section id="skills" class="section section-fullscreen">
+      <h2 class="section-title">Skills</h2>
+      <p class="section-subtitle">Click a skill to see sub-skills in a sheet.</p>
+      <p class="skills-intro">Tools I use to ship machine learning from research to reliable production systems.</p>
+      <div class="skills-list">
+        <button type="button" class="skill-card-trigger" data-sheet="sheet-ml">
+          <span class="skill-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="6" r="2.5"/><circle cx="6" cy="14" r="2.5"/><circle cx="18" cy="14" r="2.5"/><path d="M12 8.5v2M8.5 12.5l-1.5 1.5M15.5 12.5l1.5 1.5M12 11l-3 3M12 11l3 3"/></svg>
+          </span>
+          <h3>Machine Learning</h3>
+        </button>
+        <button type="button" class="skill-card-trigger" data-sheet="sheet-prog">
+          <span class="skill-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </span>
+          <h3>Programming & Frameworks</h3>
+        </button>
+        <button type="button" class="skill-card-trigger" data-sheet="sheet-cloud">
+          <span class="skill-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+          </span>
+          <h3>Cloud & MLOps</h3>
+        </button>
+        <button type="button" class="skill-card-trigger" data-sheet="sheet-tools">
+          <span class="skill-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </span>
+          <h3>Practices & Tools</h3>
+        </button>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section section-fullscreen">
+      <h2 class="section-title">Contact & Resume</h2>
+      <p class="contact-tagline">Open to new opportunities. Let's connect — send a message or download my resume.</p>
+
+      <!-- Replace YOUR_FORM_ID with your Formspree form ID from https://formspree.io -->
+      <form id="contact-form" class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+        <input type="hidden" name="_subject" value="Portfolio contact from Akhil Santha" />
+        <div class="contact-form-row">
+          <label for="contact-name" class="contact-form-label">Name</label>
+          <input type="text" id="contact-name" name="name" class="contact-form-input" placeholder="Your name" required autocomplete="name" />
+        </div>
+        <div class="contact-form-row">
+          <label for="contact-email" class="contact-form-label">Email</label>
+          <input type="email" id="contact-email" name="email" class="contact-form-input" placeholder="your@email.com" required autocomplete="email" />
+        </div>
+        <div class="contact-form-row">
+          <label for="contact-message" class="contact-form-label">Message</label>
+          <textarea id="contact-message" name="message" class="contact-form-input contact-form-textarea" placeholder="Your message..." rows="4" required></textarea>
+        </div>
+        <button type="submit" class="contact-form-submit magnetic-cta"><span class="magnetic-cta-inner">Send message</span></button>
+        <p id="contact-form-status" class="contact-form-status" aria-live="polite"></p>
+        <div id="contact-form-success" class="contact-form-success" aria-live="polite" hidden>
+          <span class="contact-form-success-icon" aria-hidden="true">✓</span>
+          <h3 class="contact-form-success-title">Message sent</h3>
+          <p class="contact-form-success-text">Thanks for reaching out. I’ll get back to you soon.</p>
+          <button type="button" class="contact-form-send-another" id="contact-form-send-another">Send another message</button>
+        </div>
+      </form>
+
+      <p class="contact-or">— or use one of these —</p>
+      <div class="contact-buttons">
+        <a href="mailto:akhilsantha7@gmail.com" class="contact-btn" target="_blank" rel="noopener">
+          <span class="contact-btn-icon" aria-hidden="true">✉</span>
+          <span class="contact-btn-label">Email</span>
+          <span class="contact-btn-link">akhilsantha7@gmail.com</span>
+        </a>
+        <a href="https://linkedin.com/in/akhilsantha" class="contact-btn" target="_blank" rel="noopener">
+          <span class="contact-btn-icon" aria-hidden="true">in</span>
+          <span class="contact-btn-label">LinkedIn</span>
+          <span class="contact-btn-link">linkedin.com/in/akhilsantha</span>
+        </a>
+        <a href="https://github.com/akhilsantha7" class="contact-btn" target="_blank" rel="noopener">
+          <span class="contact-btn-icon" aria-hidden="true">⌘</span>
+          <span class="contact-btn-label">GitHub</span>
+          <span class="contact-btn-link">github.com/akhilsantha7</span>
+        </a>
+        <a href="Akhil_Resume.pdf" class="contact-btn contact-btn-resume" target="_blank" rel="noopener">
+          <span class="contact-btn-icon" aria-hidden="true">📄</span>
+          <span class="contact-btn-label">Resume</span>
+          <span class="contact-btn-link">Open PDF</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Publication detail sheet -->
+  <div id="pub-sheet" class="pub-sheet" role="dialog" aria-modal="true" aria-labelledby="pub-sheet-title" aria-hidden="true">
+    <div class="pub-sheet-backdrop" data-close-pub></div>
+    <div class="pub-sheet-panel">
+      <button type="button" class="pub-sheet-close" data-close-pub aria-label="Close">×</button>
+      <div class="pub-sheet-content">
+        <p class="pub-sheet-venue" id="pub-sheet-venue"></p>
+        <h3 class="pub-sheet-title" id="pub-sheet-title"></h3>
+        <p class="pub-sheet-authors" id="pub-sheet-authors"></p>
+        <div class="pub-sheet-abstract" id="pub-sheet-abstract"></div>
+        <a href="#" id="pub-sheet-link" class="pub-sheet-link" target="_blank" rel="noopener">Read paper on ACM →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Skill sheets -->
+  <div id="sheet-ml" class="skill-sheet" aria-hidden="true">
+    <div class="skill-sheet-inner">
+      <button type="button" class="skill-sheet-back" aria-label="Back">← Back</button>
+      <h3 class="skill-sheet-title">Machine Learning</h3>
+      <div class="skill-sub-grid">
+        <span class="skill-sub-group-title">Deep Learning</span>
+        <span class="skill-sub-box"><img class="skill-sub-logo" src="https://cdn.simpleicons.org/pytorch/EE4C2C" alt="" width="16" height="16"/>GANs</span>
+        <span class="skill-sub-box"><img class="skill-sub-logo" src="https://cdn.simpleicons.org/huggingface/FFD21E" alt="" width="16" height="16"/>Transformers</span>
+        <span class="skill-sub-box"><img class="skill-sub-logo" src="https://cdn.simpleicons.org/huggingface/FFD21E" alt="" width="16" height="16"/>BERT</span>
+        <span class="skill-sub-box"><img class="skill-sub-logo" src="https://cdn.simpleicons.org/opencv/5C3EE8" alt="" width="16" height="16"/>CNNs</span>
+        <span class="skill-sub-group-title">AI/LLM</span>
+        <span class="skill-sub-box"><img class="skill-sub-logo" src="https://cdn.simpleicons.org/spacy/09A3D5" alt="" width="16" height="16"/>NLP</span>
+        <span class="skill-sub-box"><img class="skill-sub-logo" src="https://cdn.simpleicons.org/opencv/5C3EE8" alt="" width="16" height="16"/>Computer Vision</span>
+        <span class="skill-sub-box"><img class="skill-sub-logo" src="https://cdn.simpleicons.org/langchain/1C3C3C" alt="" width="16" height="16"/>LangChain</span>
+        <span class="skill-sub-box"><img class="skill-sub-logo" src="https://cdn.simpleicons.org/openai/000000" alt="" width="16" height="16"/>RAG</span>
+        <span class="skill-sub-group-title">Data & Analysis</span>
+        <span class="skill-sub-box"><img class="skill-sub-logo" src="https://cdn.simpleicons.org/scikitlearn/F7931E" alt="" width="16" height="16"/>Scikit-learn</span>
+        <span class="skill-sub-box"><img class="skill-sub-logo" src="https://cdn.simpleicons.org/pandas/150458" alt="" width="16" height="16"/>Pandas</span>
+        <span class="skill-sub-box"><img class="skill-sub-logo" src="https://cdn.simpleicons.org/numpy/013243" alt="" width="16" height="16"/>NumPy</span>
+        <span class="skill-sub-box"><img class="skill-sub-logo" src="https://cdn.simpleicons.org/matplotlib/11557C" alt="" width="16" height="16"/>Matplotlib</span>
+      </div>
+    </div>
+  </div>
+  <div id="sheet-prog" class="skill-sheet" aria-hidden="true">
+    <div class="skill-sheet-inner">
+      <button type="button" class="skill-sheet-back" aria-label="Back">← Back</button>
+      <h3 class="skill-sheet-title">Programming & Frameworks</h3>
+      <div class="skill-sub-grid">
+        <span class="skill-sub-group-title">Languages</span>
+        <span class="skill-sub-box"><img class="skill-sub-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="" width="16" height="16"/>Python</span>
+        <span class="skill-sub-box"><img class="skill-sub-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="" width="16" height="16"/>SQL</span>
+        <span class="skill-sub-box"><img class="skill-sub-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="" width="16" height="16"/>C++</span>
+        <span class="skill-sub-box"><img class="skill-sub-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swift/swift-original.svg" alt="" width="16" height="16"/>Swift</span>
+        <span class="skill-sub-box"><img class="skill-sub-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/r/r-original.svg" alt="" width="16" height="16"/>R</span>
+        <span class="skill-sub-group-title">Frameworks</span>
+        <span class="skill-sub-box"><img class="skill-sub-logo" src="https://cdn.simpleicons.org/tensorflow/FF6F00" alt="" width="16" height="16"/>TensorFlow</span>
+        <span class="skill-sub-box"><img class="skill-sub-logo" src="https://cdn.simpleicons.org/pytorch/EE4C2C" alt="" width="16" height="16"/>PyTorch</span>
+        <span class="skill-sub-box"><img class="skill-sub-logo" src="https://cdn.simpleicons.org/keras/D00000" alt="" width="16" height="16"/>Keras</span>
+        <span class="skill-sub-box"><img class="skill-sub-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matlab/matlab-original.svg" alt="" width="16" height="16"/>MATLAB</span>
+      </div>
+    </div>
+  </div>
+  <div id="sheet-cloud" class="skill-sheet" aria-hidden="true">
+    <div class="skill-sheet-inner">
+      <button type="button" class="skill-sheet-back" aria-label="Back">← Back</button>
+      <h3 class="skill-sheet-title">Cloud & MLOps</h3>
+      <div class="skill-sub-grid">
+        <span class="skill-sub-group-title">AWS</span>
+        <span class="skill-sub-box"><img class="skill-sub-logo skill-sub-logo-aws" src="https://cdn.simpleicons.org/amazonaws/FF9900" alt="" width="20" height="20"/>AWS SageMaker</span>
+        <span class="skill-sub-box"><img class="skill-sub-logo skill-sub-logo-aws" src="https://cdn.simpleicons.org/amazonaws/FF9900" alt="" width="20" height="20"/>AWS Glue</span>
+        <span class="skill-sub-box"><img class="skill-sub-logo skill-sub-logo-aws" src="https://cdn.simpleicons.org/amazonaws/FF9900" alt="" width="20" height="20"/>AWS Bedrock</span>
+        <span class="skill-sub-box"><img class="skill-sub-logo skill-sub-logo-aws" src="https://cdn.simpleicons.org/amazonaws/FF9900" alt="" width="20" height="20"/>AWS Lambda</span>
+        <span class="skill-sub-box"><img class="skill-sub-logo skill-sub-logo-aws" src="https://cdn.simpleicons.org/amazons3/569A31" alt="" width="20" height="20"/>Amazon S3</span>
+        <span class="skill-sub-group-title">Platforms</span>
+        <span class="skill-sub-box"><img class="skill-sub-logo" src="https://cdn.simpleicons.org/microsoftazure/0078D4" alt="" width="16" height="16"/>Azure</span>
+        <span class="skill-sub-box"><img class="skill-sub-logo" src="https://cdn.simpleicons.org/kubernetes/326CE5" alt="" width="16" height="16"/>Kubernetes</span>
+        <span class="skill-sub-box"><img class="skill-sub-logo" src="https://cdn.simpleicons.org/snowflake/29B5E8" alt="" width="16" height="16"/>Snowflake</span>
+      </div>
+    </div>
+  </div>
+  <div id="sheet-tools" class="skill-sheet" aria-hidden="true">
+    <div class="skill-sheet-inner">
+      <button type="button" class="skill-sheet-back" aria-label="Back">← Back</button>
+      <h3 class="skill-sheet-title">Practices & Tools</h3>
+      <div class="skill-sub-grid">
+        <span class="skill-sub-group-title">Workflow</span>
+        <span class="skill-sub-box"><img class="skill-sub-logo" src="https://cdn.simpleicons.org/scrumalliance/F55E1B" alt="" width="16" height="16"/>Agile</span>
+        <span class="skill-sub-box"><img class="skill-sub-logo" src="https://cdn.simpleicons.org/jira/0052CC" alt="" width="16" height="16"/>JIRA</span>
+        <span class="skill-sub-group-title">Infra & CI/CD</span>
+        <span class="skill-sub-box"><img class="skill-sub-logo" src="https://cdn.simpleicons.org/nvidia/76B900" alt="" width="16" height="16"/>Distributed Training</span>
+        <span class="skill-sub-box"><img class="skill-sub-logo" src="https://cdn.simpleicons.org/linux/FCC624" alt="" width="16" height="16"/>Linux</span>
+        <span class="skill-sub-box"><img class="skill-sub-logo" src="https://cdn.simpleicons.org/githubactions/2088FF" alt="" width="16" height="16"/>GitHub Actions</span>
+        <span class="skill-sub-box"><img class="skill-sub-logo" src="https://cdn.simpleicons.org/jenkins/D24939" alt="" width="16" height="16"/>Jenkins</span>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="mailto:akhilsantha7@gmail.com" class="footer-link" aria-label="Email" title="Email">
+        <span class="footer-icon" aria-hidden="true">✉</span>
+        <span>Email</span>
+      </a>
+      <a href="https://linkedin.com/in/akhilsantha" class="footer-link" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+        <span class="footer-icon" aria-hidden="true">in</span>
+        <span>LinkedIn</span>
+      </a>
+      <a href="https://github.com/akhilsantha7" class="footer-link" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+        <span class="footer-icon" aria-hidden="true">⌘</span>
+        <span>GitHub</span>
+      </a>
+      <a href="Akhil_Resume.pdf" class="footer-link" target="_blank" aria-label="Resume" title="Resume">
+        <span class="footer-icon" aria-hidden="true">📄</span>
+        <span>Resume</span>
+      </a>
+    </div>
+    <p class="footer-copy">© <span id="year"></span> Akhil Santha</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      var PAPERS = {
+        "sign-lang": {
+          venue: "ACM Digital Library",
+          title: "Deep Learning Methods for Sign Language Translation",
+          authors: "Akhil Santha et al.",
+          abstract: "Overview of deep learning architectures and models used for sign language translation and recognition. The work explores neural approaches to bridge signed and written languages, with applications in accessibility and human–computer interaction.",
+          url: "https://dl.acm.org/doi/10.1145/3477498"
+        },
+        "deepfakes": {
+          venue: "Thesis",
+          title: "Deepfakes Generation using GANs",
+          authors: "Akhil Santha",
+          abstract: "Thesis research on deep neural networks for generating manipulated faces in images and videos. Focus on GAN-based synthesis and detection of deepfakes.",
+          url: "#"
+        }
+      };
+      var sheet = document.getElementById("pub-sheet");
+      var linkEl = document.getElementById("pub-sheet-link");
+      if (!sheet || !linkEl) return;
+      function openPub(id) {
+        var p = PAPERS[id];
+        if (!p) return;
+        document.getElementById("pub-sheet-venue").textContent = p.venue;
+        document.getElementById("pub-sheet-title").textContent = p.title;
+        document.getElementById("pub-sheet-authors").textContent = p.authors;
+        document.getElementById("pub-sheet-abstract").textContent = p.abstract;
+        linkEl.href = p.url;
+        linkEl.textContent = p.url === "#" ? "View details" : "Read paper on ACM →";
+        linkEl.style.display = p.url === "#" ? "none" : "";
+        sheet.classList.add("pub-sheet-open");
+        sheet.setAttribute("aria-hidden", "false");
+      }
+      function closePub() {
+        sheet.classList.remove("pub-sheet-open");
+        sheet.setAttribute("aria-hidden", "true");
+      }
+      document.querySelectorAll(".pub-card").forEach(function (btn) {
+        btn.addEventListener("click", function () { openPub(this.getAttribute("data-pub")); });
+      });
+      document.querySelectorAll("[data-close-pub]").forEach(function (el) {
+        el.addEventListener("click", closePub);
+      });
+      sheet.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") closePub();
+      });
+    })();
+  </script>
+  <script>
+    (function () {
+      var triggers = document.querySelectorAll(".skill-card-trigger");
+      var sheets = document.querySelectorAll(".skill-sheet");
+      var backBtns = document.querySelectorAll(".skill-sheet-back");
+      function closeAllSheets() {
+        sheets.forEach(function (s) {
+          s.classList.remove("skill-sheet-open");
+          s.setAttribute("aria-hidden", "true");
+        });
+      }
+      triggers.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var id = this.getAttribute("data-sheet");
+          var s = id ? document.getElementById(id) : null;
+          if (s) {
+            closeAllSheets();
+            s.classList.add("skill-sheet-open");
+            s.setAttribute("aria-hidden", "false");
+          }
+        });
+      });
+      backBtns.forEach(function (btn) { btn.addEventListener("click", closeAllSheets); });
+      sheets.forEach(function (s) {
+        s.addEventListener("click", function (e) {
+          if (e.target === s) closeAllSheets();
+        });
+      });
+    })();
+  </script>
+  <script>
+    (function () {
+      function openSheet(sheetId) {
+        var sheet = document.getElementById(sheetId);
+        if (sheet) {
+          sheet.classList.add("project-sheet-open");
+          sheet.setAttribute("aria-hidden", "false");
+        }
+      }
+      function closeSheet(sheetEl) {
+        if (sheetEl) {
+          sheetEl.classList.remove("project-sheet-open");
+          sheetEl.setAttribute("aria-hidden", "true");
+          sheetEl.querySelectorAll("video").forEach(function (v) { v.pause(); });
+        }
+      }
+      var triggers = document.querySelectorAll("[data-project-sheet]");
+      triggers.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var id = this.getAttribute("data-project-sheet");
+          if (id) openSheet(id);
+        });
+      });
+      document.querySelectorAll(".project-sheet").forEach(function (sheet) {
+        sheet.querySelectorAll("[data-close-sheet]").forEach(function (el) {
+          el.addEventListener("click", function () { closeSheet(sheet); });
+        });
+        sheet.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") closeSheet(sheet);
+        });
+      });
+
+      var eduTriggers = document.querySelectorAll("[data-edu]");
+      var eduSheet = document.getElementById("edu-sheet");
+      var eduTitle = document.getElementById("edu-sheet-title");
+      var eduSubtitle = document.getElementById("edu-sheet-subtitle");
+      var eduContent = document.getElementById("edu-sheet-content");
+      var eduTitles = { masters: "Master of Science in Computer Engineering", bachelors: "Bachelor of Science in Electronics and Communications Engineering" };
+      var eduSubtitles = { masters: "Rochester Institute of Technology, NY · January 2018 – May 2020", bachelors: "University College of Engineering, Osmania University, India · September 2013 – May 2017" };
+      eduTriggers.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var key = this.getAttribute("data-edu");
+          var src = document.getElementById("edu-content-" + key);
+          if (eduTitle && eduSubtitle && eduContent && src && eduSheet) {
+            eduTitle.textContent = eduTitles[key] || "";
+            eduSubtitle.textContent = eduSubtitles[key] || "";
+            eduContent.innerHTML = src.innerHTML;
+            openSheet("edu-sheet");
+          }
+        });
+      });
+
+      var expTriggers = document.querySelectorAll("[data-exp]");
+      var expSheet = document.getElementById("exp-sheet");
+      var expTitle = document.getElementById("exp-sheet-title");
+      var expSubtitle = document.getElementById("exp-sheet-subtitle");
+      var expContent = document.getElementById("exp-sheet-content");
+      expTriggers.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var idx = this.getAttribute("data-exp");
+          var titleEl = this.querySelector("h3");
+          var tagEl = this.querySelector(".exp-company-tag");
+          var dateEl = this.querySelector(".exp-date-inline");
+          var src = document.getElementById("exp-content-" + idx);
+          if (expTitle && expSubtitle && expContent && src && expSheet) {
+            expTitle.textContent = titleEl ? titleEl.textContent : "";
+            expSubtitle.textContent = (tagEl ? tagEl.textContent + " · " : "") + (dateEl ? dateEl.textContent : "");
+            expContent.innerHTML = src.innerHTML;
+            openSheet("exp-sheet");
+          }
+        });
+      });
+
+      
+    })();
+  </script>
+</body>
+</html>

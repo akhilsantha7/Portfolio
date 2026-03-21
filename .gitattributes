@@ -1,0 +1,2 @@
+# Large media — stored with Git LFS (install: https://git-lfs.com)
+*.mp4 filter=lfs diff=lfs merge=lfs -text

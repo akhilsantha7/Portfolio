@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills | Akhil Santha</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page-skills">
+  <div class="bg-gradient"></div>
+  <div class="bg-grid"></div>
+  <div class="bg-dots" aria-hidden="true"></div>
+
+  <header class="top-nav">
+    <a href="index.html" class="nav-logo">AS</a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="education.html">Education</a>
+      <a href="experience.html">Experience</a>
+      <a href="publications.html">Publications</a>
+      <a href="projects.html">Projects</a>
+      <a href="skills.html" class="active">Skills</a>
+      <a href="contact.html">Contact & Resume</a>
+    </nav>
+  </header>
+
+  <a href="projects.html" class="page-arrow page-prev" aria-label="Previous page">←</a>
+  <a href="contact.html" class="page-arrow page-next" aria-label="Next page">→</a>
+
+  <main>
+    <section class="section">
+      <h2 class="section-title">Skills</h2>
+      <p class="section-subtitle">Click a skill to see sub-skills in a sheet.</p>
+      <div class="skills-list">
+        <button type="button" class="skill-card-trigger" data-sheet="sheet-ml">
+          <span class="skill-icon" aria-hidden="true">[Icon 1]</span>
+          <h3>Machine Learning</h3>
+        </button>
+        <button type="button" class="skill-card-trigger" data-sheet="sheet-prog">
+          <span class="skill-icon" aria-hidden="true">[Icon 2]</span>
+          <h3>Programming & Frameworks</h3>
+        </button>
+        <button type="button" class="skill-card-trigger" data-sheet="sheet-cloud">
+          <span class="skill-icon" aria-hidden="true">[Icon 3]</span>
+          <h3>Cloud & MLOps</h3>
+        </button>
+        <button type="button" class="skill-card-trigger" data-sheet="sheet-tools">
+          <span class="skill-icon" aria-hidden="true">[Icon 4]</span>
+          <h3>Practices & Tools</h3>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Sheet: Machine Learning -->
+  <div id="sheet-ml" class="skill-sheet" aria-hidden="true">
+    <div class="skill-sheet-inner">
+      <button type="button" class="skill-sheet-back" aria-label="Back">← Back</button>
+      <h3 class="skill-sheet-title">Machine Learning</h3>
+      <div class="skill-sub-grid">
+        <span class="skill-sub-box">LSTMs</span>
+        <span class="skill-sub-box">GANs</span>
+        <span class="skill-sub-box">Transformers</span>
+        <span class="skill-sub-box">BERT</span>
+        <span class="skill-sub-box">CNNs</span>
+        <span class="skill-sub-box">RNNs</span>
+        <span class="skill-sub-box">NLP</span>
+        <span class="skill-sub-box">Computer Vision</span>
+        <span class="skill-sub-box">LangChain</span>
+        <span class="skill-sub-box">RAG</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sheet: Programming & Frameworks -->
+  <div id="sheet-prog" class="skill-sheet" aria-hidden="true">
+    <div class="skill-sheet-inner">
+      <button type="button" class="skill-sheet-back" aria-label="Back">← Back</button>
+      <h3 class="skill-sheet-title">Programming & Frameworks</h3>
+      <div class="skill-sub-grid">
+        <span class="skill-sub-box">Python</span>
+        <span class="skill-sub-box">SQL</span>
+        <span class="skill-sub-box">TensorFlow</span>
+        <span class="skill-sub-box">PyTorch</span>
+        <span class="skill-sub-box">Keras</span>
+        <span class="skill-sub-box">MATLAB</span>
+        <span class="skill-sub-box">C++</span>
+        <span class="skill-sub-box">Swift</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sheet: Cloud & MLOps -->
+  <div id="sheet-cloud" class="skill-sheet" aria-hidden="true">
+    <div class="skill-sheet-inner">
+      <button type="button" class="skill-sheet-back" aria-label="Back">← Back</button>
+      <h3 class="skill-sheet-title">Cloud & MLOps</h3>
+      <div class="skill-sub-grid">
+        <span class="skill-sub-box">AWS SageMaker</span>
+        <span class="skill-sub-box">AWS Glue</span>
+        <span class="skill-sub-box">AWS Lambda</span>
+        <span class="skill-sub-box">Azure</span>
+        <span class="skill-sub-box">Kubernetes</span>
+        <span class="skill-sub-box">Snowflake</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sheet: Practices & Tools -->
+  <div id="sheet-tools" class="skill-sheet" aria-hidden="true">
+    <div class="skill-sheet-inner">
+      <button type="button" class="skill-sheet-back" aria-label="Back">← Back</button>
+      <h3 class="skill-sheet-title">Practices & Tools</h3>
+      <div class="skill-sub-grid">
+        <span class="skill-sub-box">Agile</span>
+        <span class="skill-sub-box">JIRA</span>
+        <span class="skill-sub-box">Distributed Training</span>
+        <span class="skill-sub-box">Linux</span>
+        <span class="skill-sub-box">GitHub Actions</span>
+        <span class="skill-sub-box">Jenkins</span>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="mailto:akhilsantha7@gmail.com" class="footer-link" aria-label="Email" title="Email">
+        <span class="footer-icon" aria-hidden="true">✉</span>
+        <span>Email</span>
+      </a>
+      <a href="https://linkedin.com/in/akhilsantha" class="footer-link" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+        <span class="footer-icon" aria-hidden="true">in</span>
+        <span>LinkedIn</span>
+      </a>
+      <a href="https://github.com/akhilsantha7" class="footer-link" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+        <span class="footer-icon" aria-hidden="true">⌘</span>
+        <span>GitHub</span>
+      </a>
+      <a href="Akhil_Resume.pdf" class="footer-link" target="_blank" aria-label="Resume" title="Resume">
+        <span class="footer-icon" aria-hidden="true">📄</span>
+        <span>Resume</span>
+      </a>
+    </div>
+    <p class="footer-copy">© <span id="year"></span> Akhil Santha</p>
+  </footer>
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      var triggers = document.querySelectorAll(".skill-card-trigger");
+      var sheets = document.querySelectorAll(".skill-sheet");
+      var backBtns = document.querySelectorAll(".skill-sheet-back");
+
+      function closeAllSheets() {
+        sheets.forEach(function (sheet) {
+          sheet.classList.remove("skill-sheet-open");
+          sheet.setAttribute("aria-hidden", "true");
+        });
+      }
+
+      triggers.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var id = this.getAttribute("data-sheet");
+          var sheet = id ? document.getElementById(id) : null;
+          if (sheet) {
+            closeAllSheets();
+            sheet.classList.add("skill-sheet-open");
+            sheet.setAttribute("aria-hidden", "false");
+          }
+        });
+      });
+
+      backBtns.forEach(function (btn) {
+        btn.addEventListener("click", closeAllSheets);
+      });
+
+      sheets.forEach(function (sheet) {
+        sheet.addEventListener("click", function (e) {
+          if (e.target === sheet) closeAllSheets();
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

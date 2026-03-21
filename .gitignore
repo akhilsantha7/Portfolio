@@ -1,0 +1,15 @@
+# OS
+.DS_Store
+
+# Large video — use Git LFS if you commit (see GIT_LFS.md), or host externally
+*.mov
+
+# Optional: keep MP4 out of normal commits until you use `git lfs track`
+# *.mp4
+
+# Personal / version clutter (don’t commit)
+V1/
+V2/
+**/CFNetworkDownload*
+*RenewalReceipt*
+*VTR-60*
