@@ -10,9 +10,8 @@ If you push this whole project so the repo contains `portfolio/` at the top leve
 
 1. Create a new **repository** on GitHub (e.g. `portfolio` or `my-site`).
 2. Push the **`Resume`** folder contents to the **`main`** branch.
-3. In the repo: **Settings → Pages → Build and deployment**
-   - **Source:** **GitHub Actions** (not “Deploy from a branch” for this layout).
-4. The workflow **`.github/workflows/github-pages.yml`** will publish the **`portfolio/`** folder on every push to `main`.
+3. **Important (first time):** **Settings → Pages → Build and deployment → Source:** **GitHub Actions**, then **Save**.
+4. The workflow uses **build** (upload artifact) + **deploy** (`deploy-pages`) only — **no `configure-pages`** step, so it avoids the **GET /pages → Not Found** API error.
 5. After the first successful run, your site URL appears under **Settings → Pages** (for you: `https://akhilsantha7.github.io/<repo>/`).
 
 ### User site at the root URL (no `/repo` path)

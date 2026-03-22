@@ -1,6 +1,6 @@
-# Deploy /portfolio to GitHub Pages (monorepo layout: site lives in portfolio/)
-# One-time: Settings → Pages → Source = GitHub Actions (do not rely on configure-pages enablement;
-# GITHUB_TOKEN often cannot create the site via API).
+# GitHub Pages: upload artifact → deploy (no configure-pages; avoids GET /pages 404)
+# One-time: Settings → Pages → Source = GitHub Actions, then push.
+# https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
 name: Deploy GitHub Pages
 
 on:
@@ -18,18 +18,22 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           lfs: true
-      - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
           path: portfolio
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - id: deployment
         uses: actions/deploy-pages@v4
