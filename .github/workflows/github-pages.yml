@@ -1,5 +1,6 @@
 # Deploy /portfolio to GitHub Pages (monorepo layout: site lives in portfolio/)
-# Repo Settings → Pages → Build: GitHub Actions (first deploy may need this enabled)
+# One-time: Settings → Pages → Source = GitHub Actions (do not rely on configure-pages enablement;
+# GITHUB_TOKEN often cannot create the site via API).
 name: Deploy GitHub Pages
 
 on:
@@ -26,10 +27,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           lfs: true
-      # Creates/enables Pages for this repo on first run (avoids "Get Pages site failed" / Not Found)
       - uses: actions/configure-pages@v5
-        with:
-          enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: portfolio
