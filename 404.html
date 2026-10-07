@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page not found | Akhil Santha</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2306b6d4'/%3E%3Cstop offset='1' stop-color='%238b5cf6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' fill='white' text-anchor='middle'%3EAS%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&family=Instrument+Serif&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0f1419; --text: #e2e8f0; --muted: #94a3b8; --accent: #06b6d4; --accent2: #8b5cf6;
+      --border: rgba(6, 182, 212, 0.2); --chip: rgba(6, 182, 212, 0.1);
+    }
+    @media (prefers-color-scheme: light) {
+      :root { --bg: #f8fafc; --text: #0f172a; --muted: #475569; --accent: #0891b2; --border: rgba(8, 145, 178, 0.25); --chip: rgba(8, 145, 178, 0.1); }
+    }
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      min-height: 100vh; display: grid; place-items: center; padding: 24px 16px;
+      background: var(--bg); color: var(--text); font-family: "DM Sans", system-ui, sans-serif; text-align: center;
+      background-image: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(6, 182, 212, 0.16), transparent 70%);
+    }
+    .term { font-family: ui-monospace, Menlo, monospace; color: var(--accent); font-size: 0.95rem; }
+    h1 { font-family: "Instrument Serif", Georgia, serif; font-weight: 400; font-size: clamp(4.5rem, 18vw, 8rem); line-height: 1; margin: 0.4rem 0 0.6rem;
+         background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    p { color: var(--muted); max-width: 34ch; margin: 0 auto 1.6rem; line-height: 1.55; }
+    .row { display: flex; gap: 0.6rem; justify-content: center; flex-wrap: wrap; }
+    a { display: inline-block; padding: 0.7rem 1.15rem; border-radius: 10px; font-weight: 600; text-decoration: none; border: 1px solid var(--border); color: var(--text); background: var(--chip); }
+    a.primary { background: var(--accent); color: #0f172a; border-color: transparent; }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="term">$ cd ./this-page<br>error: no such page</div>
+    <h1>404</h1>
+    <p>This page doesn’t exist. It may have moved, or the link has a typo.</p>
+    <div class="row">
+      <a class="primary" href="/Portfolio/">Back to portfolio</a>
+      <a href="/Portfolio/#projects">See projects</a>
+      <a href="mailto:akhilsantha7@gmail.com">Email Akhil</a>
+    </div>
+  </main>
+</body>
+</html>

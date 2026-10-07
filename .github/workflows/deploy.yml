@@ -23,11 +23,11 @@ jobs:
     env:
       # Add a file here when the site starts using it.
       SITE_FILES: >-
-        index.html styles.css script.js chatbot.js chatbot.css
-        bg.jpg IOS_app.png rit.png uceou.png Akhil_Resume.pdf
-        .nojekyll
+        index.html 404.html styles.css script.js chatbot.js chatbot.css
+        bg.jpg IOS_app.webp rit.png uceou.png og-image.jpg
+        Akhil_Resume.pdf .nojekyll
       # Published only if present and real (not an LFS placeholder).
-      OPTIONAL_FILES: 1.mp4 2.mp4
+      OPTIONAL_FILES: about.png 1.mp4 2.mp4
     steps:
       - uses: actions/checkout@v4
 

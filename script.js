@@ -474,3 +474,18 @@
     }, true);
   }
 })();
+
+/* ==========================================================
+   Visitor stats (GoatCounter, privacy-friendly, no cookies).
+   1. Sign up free at https://www.goatcounter.com
+   2. Put your site code below, e.g. "akhilsantha"
+   ========================================================== */
+(function () {
+  var GOATCOUNTER_CODE = ""; // <-- your GoatCounter code here
+  if (!GOATCOUNTER_CODE || /^(localhost|127\.)/.test(location.hostname) || location.protocol === "file:") return;
+  var s = document.createElement("script");
+  s.async = true;
+  s.src = "https://gc.zgo.at/count.js";
+  s.setAttribute("data-goatcounter", "https://" + GOATCOUNTER_CODE + ".goatcounter.com/count");
+  document.head.appendChild(s);
+})();
