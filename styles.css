@@ -4930,3 +4930,246 @@ body.page-single main {
   font-size: 0.8rem;
   opacity: 0.9;
 }
+
+
+/* ==========================================================
+   Enhancements (Oct 2026): mobile menu, hero stats, photo
+   fallback, experience highlights, visual projects, inline
+   skills. Appended last so these rules take precedence.
+   ========================================================== */
+
+/* --- Mobile menu --- */
+.nav-toggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  background: var(--accent-dim);
+  cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.nav-toggle-bar {
+  display: block;
+  width: 18px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--accent);
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+.nav-open .nav-toggle-bar:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.nav-open .nav-toggle-bar:nth-child(2) { opacity: 0; }
+.nav-open .nav-toggle-bar:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+@media (max-width: 860px) {
+  .nav-toggle { display: inline-flex; }
+  .top-nav .nav-links {
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    gap: 2px;
+    padding: 0.5rem 1rem 1rem;
+    background: var(--bg-deep);
+    border-bottom: 1px solid var(--card-border);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0.2s;
+  }
+  .nav-open .top-nav .nav-links {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s;
+  }
+  .top-nav .nav-links a { font-size: 1rem; padding: 0.75rem 0.9rem; }
+  .top-nav .nav-links a::after { display: none; }
+  .nav-right { gap: 0.5rem; }
+}
+
+/* --- Hero stats --- */
+.hero-stats {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+  max-width: 760px;
+  width: 100%;
+}
+.hero-stats li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.9rem 0.75rem;
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  background: var(--accent-dim);
+  text-align: center;
+}
+.hero-stats strong {
+  font-family: var(--font-serif);
+  font-size: 1.9rem;
+  font-weight: 400;
+  line-height: 1.1;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.hero-stats span {
+  font-size: 0.8rem;
+  line-height: 1.35;
+  color: var(--text-muted);
+}
+@media (max-width: 640px) {
+  .hero-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.6rem; }
+  .hero-stats strong { font-size: 1.6rem; }
+}
+
+/* --- About photo fallback (until about.png exists) --- */
+.about-photo-fallback {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-serif);
+  font-size: clamp(4rem, 9vw, 7rem);
+  letter-spacing: 0.04em;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  opacity: 0.85;
+  z-index: 1;
+  pointer-events: none;
+}
+.about-photo-wrap.has-photo .about-photo-fallback { display: none; }
+
+/* --- Experience highlights --- */
+.exp-card-trigger h3 { margin: 0; }
+.exp-highlight {
+  order: 10;
+  flex-basis: 100%;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+
+/* --- Projects: featured + tags --- */
+.projects-grid {
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.1rem;
+}
+.projects-grid .project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+}
+.projects-grid .project-card .project-card-trigger-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+.projects-grid .project-card h3 { margin: 0; line-height: 1.3; }
+.project-card-desc {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+.project-tags {
+  list-style: none;
+  margin: auto 0 0;
+  padding: 0.35rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+.project-tags li {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  color: var(--accent);
+  background: var(--accent-dim);
+  border: 1px solid var(--card-border);
+}
+.projects-grid .project-card-trigger .project-card-arrow {
+  position: absolute;
+  top: 1.1rem;
+  right: 1.1rem;
+}
+.projects-grid .project-card { position: relative; }
+.projects-grid .project-card h3 { padding-right: 1.5rem; }
+.project-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+.projects-grid .project-card-featured {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 1.75rem;
+  align-items: center;
+  padding: 1.25rem;
+}
+.project-feature-media {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--card-border);
+  aspect-ratio: 16 / 10;
+}
+.project-feature-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.projects-grid .project-card-featured .project-card-badge {
+  position: static;
+  align-self: flex-start;
+}
+.projects-grid .project-card-featured h3 { font-size: 1.45rem; padding-right: 0; }
+.project-card-cta {
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+@media (max-width: 760px) {
+  .projects-grid .project-card-featured { grid-template-columns: 1fr; gap: 1rem; }
+}
+
+/* --- Skills shown inline --- */
+.skills-list { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); align-items: stretch; }
+.skill-card-trigger { flex-wrap: wrap; align-items: center; height: 100%; align-content: flex-start; }
+.skill-card-trigger h3 { flex: 1; margin: 0; }
+.skill-card-chips {
+  flex-basis: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.4rem;
+}
+.skill-card-chip {
+  font-size: 0.78rem;
+  padding: 0.25rem 0.55rem;
+  border-radius: 8px;
+  color: var(--text);
+  background: var(--accent-dim);
+  border: 1px solid var(--card-border);
+}

@@ -402,3 +402,75 @@
     initMagnetic(".magnetic-cta", 0.22, 10);
   }
 })();
+
+/* ==========================================================
+   Enhancements (Oct 2026)
+   ========================================================== */
+(function () {
+  "use strict";
+  var root = document.documentElement;
+
+  // --- Mobile menu ---
+  var toggle = document.getElementById("nav-toggle");
+  var links = document.getElementById("nav-links");
+  function setMenu(open) {
+    root.classList.toggle("nav-open", open);
+    if (toggle) {
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    }
+  }
+  if (toggle && links) {
+    toggle.addEventListener("click", function () { setMenu(!root.classList.contains("nav-open")); });
+    links.addEventListener("click", function (e) { if (e.target.closest("a")) setMenu(false); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") setMenu(false); });
+    document.addEventListener("click", function (e) {
+      if (root.classList.contains("nav-open") && !e.target.closest(".top-nav")) setMenu(false);
+    });
+    window.addEventListener("resize", function () { if (window.innerWidth > 860) setMenu(false); });
+  }
+
+  // --- About photo: show initials until about.png is added ---
+  var photo = document.querySelector(".about-photo-wrap");
+  if (photo) {
+    var img = new Image();
+    img.onload = function () { photo.classList.add("has-photo"); };
+    img.src = "about.png";
+  }
+
+  // --- Skills: show each group's skills on its card ---
+  document.querySelectorAll(".skill-card-trigger[data-sheet]").forEach(function (card) {
+    var sheet = document.getElementById(card.getAttribute("data-sheet"));
+    if (!sheet || card.querySelector(".skill-card-chips")) return;
+    var wrap = document.createElement("span");
+    wrap.className = "skill-card-chips";
+    sheet.querySelectorAll(".skill-sub-box").forEach(function (box) {
+      var chip = document.createElement("span");
+      chip.className = "skill-card-chip";
+      chip.textContent = box.textContent.trim();
+      wrap.appendChild(chip);
+    });
+    card.appendChild(wrap);
+  });
+
+  // --- Project cards: keyboard support ---
+  document.querySelectorAll(".project-card[data-project-sheet]").forEach(function (card) {
+    card.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); card.click(); }
+    });
+  });
+
+  // --- Contact form: until a Formspree ID is set, open the visitor's email app ---
+  var form = document.getElementById("contact-form");
+  if (form && /YOUR_FORM_ID/.test(form.getAttribute("action") || "")) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      var get = function (n) { var el = form.elements[n]; return el ? el.value.trim() : ""; };
+      var name = get("name"), email = get("email") || get("_replyto"), msg = get("message");
+      var subject = "Portfolio inquiry" + (name ? " from " + name : "");
+      var body = msg + (name || email ? "\n\n— " + name + (email ? " (" + email + ")" : "") : "");
+      window.location.href = "mailto:akhilsantha7@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+    }, true);
+  }
+})();

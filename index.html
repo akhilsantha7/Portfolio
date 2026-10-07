@@ -21,6 +21,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2306b6d4'/%3E%3Cstop offset='1' stop-color='%238b5cf6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' fill='white' text-anchor='middle'%3EAS%3C/text%3E%3C/svg%3E" />
+  <meta name="theme-color" content="#0f1419" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="chatbot.css" />
 </head>
@@ -48,7 +50,7 @@
 
   <header class="top-nav">
     <a href="#home" class="nav-logo">AS</a>
-    <nav class="nav-links">
+    <nav class="nav-links" id="nav-links">
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#education">Education</a>
@@ -59,6 +61,9 @@
       <a href="#contact">Contact</a>
     </nav>
     <div class="nav-right">
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
+      </button>
       <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
         <span class="theme-toggle-icon theme-icon-dark" aria-hidden="true">☀</span>
         <span class="theme-toggle-icon theme-icon-light" aria-hidden="true">☽</span>
@@ -79,10 +84,12 @@
           <a href="#contact" class="hero-cta magnetic-cta"><span class="magnetic-cta-inner">Get in touch</span></a>
           <a href="Akhil_Resume.pdf" class="hero-cta hero-cta-primary magnetic-cta" target="_blank" rel="noopener"><span class="magnetic-cta-inner">View Resume</span></a>
         </div>
-        <div class="hero-featured" aria-hidden="true">
-          <span class="hero-featured-label">Building at the intersection of</span>
-          <span class="hero-featured-tags">Machine Learning, Deep Learning, Data Science, NLP, Computer Vision, GenAI</span>
-        </div>
+        <ul class="hero-stats" aria-label="Highlights">
+          <li><strong>5+ yrs</strong><span>ML in production</span></li>
+          <li><strong>99%</strong><span>accuracy on child-safety NLP</span></li>
+          <li><strong>75%</strong><span>smaller models on-device</span></li>
+          <li><strong>ACM</strong><span>published research</span></li>
+        </ul>
         <a href="#about" class="hero-scroll-hint magnetic-cta" aria-label="Scroll to About section">
           <span class="magnetic-cta-inner">
             <span class="hero-scroll-hint-text">Explore</span>
@@ -97,6 +104,7 @@
       <div class="about-layout">
         <div class="about-photo-wrap about-photo-slide" role="img" aria-label="Akhil Santha">
           <span class="about-photo-glow" aria-hidden="true"></span>
+          <span class="about-photo-fallback" aria-hidden="true">AS</span>
         </div>
         <div class="about-content">
           <p class="about-belief">Ship the model, then ship the system.</p>
@@ -290,8 +298,7 @@
 
     <section id="experience" class="section section-fullscreen">
       <h2 class="section-title">Work Experience</h2>
-      <p class="section-subtitle">My most recent work experience.</p>
-
+      
       <div class="exp-list">
         <button type="button" class="exp-card-trigger exp-card" data-exp="0" aria-haspopup="dialog">
           <span class="exp-card-top">
@@ -299,6 +306,7 @@
             <span class="exp-company-tag">CVS · TX</span>
           </span>
           <h3>Senior Machine Learning Engineer</h3>
+          <span class="exp-highlight">GenAI product embeddings · SKU assortment models · Kubernetes MLOps</span>
           <span class="exp-date-inline">June 2025 – Present</span>
           <span class="project-card-arrow" aria-hidden="true">→</span>
         </button>
@@ -308,6 +316,7 @@
             <span class="exp-company-tag">Fannie Mae · TX</span>
           </span>
           <h3>Machine Learning Engineer II</h3>
+          <span class="exp-highlight">LLMs on AWS Bedrock · SageMaker MLOps · 20% faster data pipelines</span>
           <span class="exp-date-inline">June 2023 – June 2025</span>
           <span class="project-card-arrow" aria-hidden="true">→</span>
         </button>
@@ -317,6 +326,7 @@
             <span class="exp-company-tag">Smith Micro Software · CA</span>
           </span>
           <h3>Machine Learning Engineer</h3>
+          <span class="exp-highlight">99% accuracy on bullying &amp; profanity detection · 8-bit models on iOS</span>
           <span class="exp-date-inline">June 2021 – April 2023</span>
           <span class="project-card-arrow" aria-hidden="true">→</span>
         </button>
@@ -326,6 +336,7 @@
             <span class="exp-company-tag">Boston Scientific · CA</span>
           </span>
           <h3>Algorithm Engineer — Machine Learning</h3>
+          <span class="exp-highlight">IVUS stent segmentation · 2D/3D U-Net · multi-GPU training</span>
           <span class="exp-date-inline">November 2020 – June 2021</span>
           <span class="project-card-arrow" aria-hidden="true">→</span>
         </button>
@@ -335,6 +346,7 @@
             <span class="exp-company-tag">Kodak Alaris · NY</span>
           </span>
           <h3>Machine Learning Intern</h3>
+          <span class="exp-highlight">98% eyeglass detection · TensorRT 8-bit · kiosk deployment</span>
           <span class="exp-date-inline">February 2019 – December 2019</span>
           <span class="project-card-arrow" aria-hidden="true">→</span>
         </button>
@@ -344,6 +356,7 @@
             <span class="exp-company-tag">Visual DX · NY</span>
           </span>
           <h3>Machine Learning Intern</h3>
+          <span class="exp-highlight">Skin lesion classifier 2% above state-of-the-art benchmarks</span>
           <span class="exp-date-inline">August 2018 – December 2018</span>
           <span class="project-card-arrow" aria-hidden="true">→</span>
         </button>
@@ -428,60 +441,72 @@
       <h2 class="section-title">Projects</h2>
       <p class="section-subtitle">Please refer to <a href="https://github.com/akhilsantha7" target="_blank" rel="noopener">GitHub</a> for source code and more projects.</p>
       <div class="projects-grid">
-        <article class="card project-card project-card-trigger project-card-featured" data-project-sheet="dharamind-sheet">
-          <span class="project-card-badge">Featured</span>
+        <article class="card project-card project-card-trigger project-card-featured" data-project-sheet="dharamind-sheet" tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="project-feature-media">
+            <img src="IOS_app.png" alt="DHARAMIND app architecture" loading="lazy" decoding="async" />
+          </div>
           <div class="project-card-trigger-text">
-            <h3>iOS App — DHARAMIND</h3>
-            <p class="meta">iOS · Mobile · On-device ML + GenAI</p>
-            <p class="project-card-impact">Smart agriculture: irrigation timing & plant disease detection for farmers.</p>
+            <span class="project-card-badge">Featured</span>
+            <h3>DHARAMIND — iOS smart-agriculture app</h3>
+            <p class="project-card-impact">Helps farmers decide when to irrigate and spot plant disease early, combining on-device ML with cloud GenAI.</p>
+            <ul class="project-tags"><li>Swift</li><li>Core ML</li><li>GenAI</li><li>Computer Vision</li></ul>
+            <span class="project-card-cta">See architecture &amp; demo →</span>
+          </div>
+        </article>
+        <article class="card project-card project-card-trigger" data-project-sheet="soilq-sheet" tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="project-card-trigger-text">
+            <h3>Soil Moisture &amp; Plant Disease Detection</h3>
+            <p class="project-card-desc">Moisture prediction for irrigation plus leaf-image disease classification, served by a Dockerized API.</p>
+            <ul class="project-tags"><li>Python</li><li>Flask</li><li>Docker</li><li>CNN</li></ul>
           </div>
           <span class="project-card-arrow" aria-hidden="true">→</span>
         </article>
-        <article class="card project-card project-card-trigger" data-project-sheet="soilq-sheet">
+        <article class="card project-card project-card-trigger" data-project-sheet="signlang-sheet" tabindex="0" role="button" aria-haspopup="dialog">
           <div class="project-card-trigger-text">
-            <h3>Soil Moisture and Plant Disease Detection</h3>
-            <p class="meta">Computer Vision · Agriculture</p>
+            <h3>Sign Language Recognition</h3>
+            <p class="project-card-desc">Skeleton-based recognition: OpenPose keypoints into spatial-temporal graph convolutions.</p>
+            <ul class="project-tags"><li>PyTorch</li><li>ST-GCN</li><li>OpenPose</li></ul>
+          </div>
+          <span class="project-card-arrow" aria-hidden="true">→</span>
+        </article>
+        <article class="card project-card project-card-trigger" data-project-sheet="tomato-sheet" tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="project-card-trigger-text">
+            <h3>Fruit &amp; Ripeness Detection</h3>
+            <p class="project-card-desc">Detects fruit with YOLO and classifies ripeness stage from color and texture.</p>
+            <ul class="project-tags"><li>YOLO</li><li>Object Detection</li><li>Python</li></ul>
+          </div>
+          <span class="project-card-arrow" aria-hidden="true">→</span>
+        </article>
+        <article class="card project-card project-card-trigger" data-project-sheet="facial-sheet" tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="project-card-trigger-text">
+            <h3>Facial Understanding &amp; Eye-Glass Detection</h3>
+            <p class="project-card-desc">Face and landmark detection in C++ and a quantized eyeglass classifier at 98.1% accuracy.</p>
+            <ul class="project-tags"><li>TensorFlow</li><li>C++</li><li>OpenCV</li></ul>
+          </div>
+          <span class="project-card-arrow" aria-hidden="true">→</span>
+        </article>
+        <article class="card project-card project-card-trigger" data-project-sheet="facemask-sheet" tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="project-card-trigger-text">
+            <h3>Face Mask Detection</h3>
+            <p class="project-card-desc">Real-time mask / no-mask detection on images, video and live webcam.</p>
+            <ul class="project-tags"><li>OpenCV</li><li>Python</li><li>Real-time</li></ul>
+          </div>
+          <span class="project-card-arrow" aria-hidden="true">→</span>
+        </article>
+        <article class="card project-card project-card-trigger" data-project-sheet="skin-sheet" tabindex="0" role="button" aria-haspopup="dialog">
+          <div class="project-card-trigger-text">
+            <h3>Skin Disease Classification</h3>
+            <p class="project-card-desc">DenseNet and ResNet classifiers trained on the SD198 and HAM datasets.</p>
+            <ul class="project-tags"><li>PyTorch</li><li>DenseNet</li><li>ResNet</li></ul>
           </div>
           <span class="project-card-arrow" aria-hidden="true">→</span>
         </article>
         <article class="card project-card">
-          <h3>Evolution of Graph Classifiers</h3>
-          <p class="meta">Deep Learning · Graph Neural Networks</p>
-        </article>
-        <article class="card project-card project-card-trigger" data-project-sheet="tomato-sheet">
           <div class="project-card-trigger-text">
-            <h3>Fruit and Ripeness Detection using YOLO</h3>
-            <p class="meta">YOLO · Object Detection</p>
+            <h3>Evolution of Graph Classifiers</h3>
+            <p class="project-card-desc">Research at RIT on how graph CNN classifiers have evolved.</p>
+            <ul class="project-tags"><li>GNNs</li><li>Research</li></ul>
           </div>
-          <span class="project-card-arrow" aria-hidden="true">→</span>
-        </article>
-        <article class="card project-card project-card-trigger" data-project-sheet="facemask-sheet">
-          <div class="project-card-trigger-text">
-            <h3>Face Mask Detection</h3>
-            <p class="meta">Computer Vision · Detection</p>
-          </div>
-          <span class="project-card-arrow" aria-hidden="true">→</span>
-        </article>
-        <article class="card project-card project-card-trigger" data-project-sheet="facial-sheet">
-          <div class="project-card-trigger-text">
-            <h3>Facial Understanding & Eye-Glass Detection</h3>
-            <p class="meta">Computer Vision · Face Analysis</p>
-          </div>
-          <span class="project-card-arrow" aria-hidden="true">→</span>
-        </article>
-        <article class="card project-card project-card-trigger" data-project-sheet="signlang-sheet">
-          <div class="project-card-trigger-text">
-            <h3>Sign Language Recognition</h3>
-            <p class="meta">Skeleton-Based · Action Recognition</p>
-          </div>
-          <span class="project-card-arrow" aria-hidden="true">→</span>
-        </article>
-        <article class="card project-card project-card-trigger" data-project-sheet="skin-sheet">
-          <div class="project-card-trigger-text">
-            <h3>Skin Disease Classification</h3>
-            <p class="meta">PyTorch · Computer Vision</p>
-          </div>
-          <span class="project-card-arrow" aria-hidden="true">→</span>
         </article>
       </div>
     </section>
@@ -678,7 +703,6 @@
 
     <section id="skills" class="section section-fullscreen">
       <h2 class="section-title">Skills</h2>
-      <p class="section-subtitle">Click a skill to see sub-skills in a sheet.</p>
       <p class="skills-intro">Tools I use to ship machine learning from research to reliable production systems.</p>
       <div class="skills-list">
         <button type="button" class="skill-card-trigger" data-sheet="sheet-ml">
