@@ -1,0 +1,69 @@
+# Deploys the portfolio to GitHub Pages.
+# Only the files listed in SITE_FILES are published. Everything else
+# in the repo (scripts, notes, drafts) never gets a public URL.
+name: Deploy portfolio
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: # adds a "Run workflow" button in the Actions tab
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      # Add a file here when the site starts using it.
+      SITE_FILES: >-
+        index.html styles.css script.js chatbot.js chatbot.css
+        bg.jpg IOS_app.png rit.png uceou.png Akhil_Resume.pdf
+        .nojekyll
+      # Published only if present and real (not an LFS placeholder).
+      OPTIONAL_FILES: 1.mp4 2.mp4
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Collect site files
+        run: |
+          set -e
+          mkdir -p _site
+          for f in $SITE_FILES; do
+            if [ ! -f "$f" ]; then
+              echo "::error::Missing required file: $f"
+              exit 1
+            fi
+            cp "$f" _site/
+          done
+          for f in $OPTIONAL_FILES; do
+            if [ -f "$f" ] && [ "$(wc -c < "$f")" -gt 1024 ]; then
+              cp "$f" _site/
+            else
+              echo "::warning::Skipping $f (missing or placeholder)"
+            fi
+          done
+          echo "Publishing:"
+          ls -la _site
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
