@@ -5273,3 +5273,20 @@ body.page-single main {
   .exp-list::before { left: 0.35rem; }
   .exp-list > .exp-card::after { left: calc(-1.6rem + 0.35rem - 6px + 1px); }
 }
+
+/* --- About photo on phones: stack it above the text --- */
+@media (max-width: 720px) {
+  .page-single #about .about-layout { grid-template-columns: 1fr; }
+  .page-single #about .about-photo-wrap {
+    order: 0;
+    position: relative;
+    justify-self: center;
+    width: min(240px, 64vw);
+    max-width: none;
+    min-height: 0;
+    max-height: none;
+    aspect-ratio: 3 / 5;
+    margin-bottom: 0.5rem;
+  }
+  .page-single #about .about-content { order: 1; }
+}
