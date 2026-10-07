@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+
+# Local helper scripts and notes (not part of the site)
+*.sh
+concat-list.txt
+VIDEO_README.txt
+
+# Old standalone pages (the site is all in index.html now)
+about.html
+contact.html
+education.html
+experience.html
+projects.html
+publications.html
+skills.html
+
+# Images the site doesn't use
+file.png
+robot-hand-welcome.png
+screen2.jpg
+
+# Demo videos: these are currently LFS placeholders, not real videos.
+# Remove these two lines once you put the real (compressed) videos here.
+1.mp4
+2.mp4
